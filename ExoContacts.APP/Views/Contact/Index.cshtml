@@ -1,0 +1,43 @@
+﻿@using ExoContacts.APP.Models
+@model List<Contact>
+@{
+    ViewData["Title"] = "ContactList";
+}
+
+<h2>Mes contacts : </h2>
+
+<a class="btn btn-primary" asp-controller="Contact" asp-action="">Ajouter un contact</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Surnom</th>
+            <th>Tel</th>
+            <th>Email</th>
+            <th>Date de naissance</th>
+            <th>Type Contact</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach(Contact c in Model)
+        {
+            <tr>
+                <td>@c.LastName</td>
+                <td>@c.FirstName</td>
+                <td>@(c.NickName == null ? "Pas de surnom 😭" : c.NickName)</td>
+                <td>@c.Phone</td>
+                <td>@c.Mail</td>
+                <td>@(c.BirthDate == null ? "Inconnue" : c.BirthDate.ToString())</td>
+                <td>@c.ContactType</td>
+                <td>
+                    <a class="btn btn-secondary" asp-controller="Contact" asp-action="" asp-route-id="">✏ Modifier</a>
+                    <a class="btn btn-danger" asp-controller="Contact" asp-action="" asp-route-id="">🗑 Supprimer</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
