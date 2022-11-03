@@ -11,6 +11,9 @@ builder.Services.AddScoped<ContactService>();
 builder.Services.AddScoped<UserRepository>();
 builder.Services.AddScoped<UserService>();
 
+//Config pour pouvoir utiliser les variables de session
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -20,6 +23,9 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Home/Error");
 }
 app.UseStaticFiles();
+
+//Indiquer que notre app va utiliser les variables de session
+app.UseSession();
 
 app.UseRouting();
 

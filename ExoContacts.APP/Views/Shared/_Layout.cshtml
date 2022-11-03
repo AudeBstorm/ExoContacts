@@ -29,9 +29,25 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Contact" asp-action="Index">Mes Contacts</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Login">Me connecter</a>
-                        </li>
+
+                        @if(string.IsNullOrEmpty(ViewContext.HttpContext.Session.GetString("Email")))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Login">Me connecter</a>
+                            </li>
+
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Logout">Me déconnecter</a>
+                            </li>
+                            <li class="nav-item">
+                                <p class="nav-link text-primary">Heureux de vous revoir @ViewContext.HttpContext.Session.GetString("Email")</p>
+                            </li>
+                            
+                        }
+
                     </ul>
                 </div>
             </div>

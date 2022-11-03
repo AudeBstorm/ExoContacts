@@ -40,6 +40,8 @@ namespace ExoContacts.APP.Controllers
 
             }
 
+            HttpContext.Session.SetString("Email", user.Email);
+
             return RedirectToAction("Index", "Contact");
         }
 
@@ -62,7 +64,15 @@ namespace ExoContacts.APP.Controllers
                 return View(authLogin);
             }
 
+            HttpContext.Session.SetString("Email", user.Email);
+
             return RedirectToAction("Index","Contact");
+        }
+
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
