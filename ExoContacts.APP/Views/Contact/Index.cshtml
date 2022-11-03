@@ -1,5 +1,5 @@
-﻿@using ExoContacts.APP.Models
-@model List<Contact>
+﻿@using E = ExoContacts.DAL.Entities
+@model IEnumerable<E.Contact>
 @{
     ViewData["Title"] = "ContactList";
 }
@@ -22,7 +22,7 @@
     </thead>
 
     <tbody>
-        @foreach(Contact c in Model)
+        @foreach(E.Contact c in Model)
         {
             <tr>
                 <td>@c.LastName</td>
