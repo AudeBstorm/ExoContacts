@@ -1,0 +1,51 @@
+﻿@using ExoContacts.APP.Models
+@model Contact
+@{
+    ViewData["Title"] = "Update Contact";
+}
+
+<h2>Modification du contact</h2>
+<a class="btn btn-outline-secondary" asp-controller="Contact" asp-action="Index">Revenir vers la liste des contacts</a>
+
+<form asp-action="Update">
+    <div class="form-group">
+        <label asp-for="LastName" class="control-label"></label>
+        <input asp-for="LastName" class="form-control"/>
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FirstName" class="control-label"></label>
+        <input asp-for="FirstName" class="form-control"/>
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NickName" class="control-label"></label>
+        <input asp-for="NickName" class="form-control"/>
+        <span asp-validation-for="NickName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone" class="control-label"></label>
+        <input asp-for="Phone" class="form-control"/>
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Mail" class="control-label"></label>
+        <input asp-for="Mail" class="form-control"/>
+        <span asp-validation-for="Mail" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="BirthDate" class="control-label"></label>
+        <input asp-for="BirthDate" class="form-control"/>
+        <span class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ContactType"></label>
+        <select asp-for="ContactType">
+            <option value="Collègue">Collègue</option>
+            <option value="Famille">Famille</option>
+            <option value="Ami">Ami</option>
+            <option value="Autre">Autre</option>
+        </select>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Modifier contact" />
+</form>
