@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExoContacts.APP", "ExoConta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoContacts.DAL", "ExoContacts.DAL\ExoContacts.DAL.csproj", "{7E426F8F-F953-432A-9E7A-8E9B542602B9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoContacts.BLL", "ExoContacts.BLL\ExoContacts.BLL.csproj", "{93E8447C-E946-490E-895D-6154AAEF99A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoContacts.Domain", "ExoContacts.Domain\ExoContacts.Domain.csproj", "{B8B3380B-F3AA-44C2-8A20-DDF2D163BA81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{7E426F8F-F953-432A-9E7A-8E9B542602B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E426F8F-F953-432A-9E7A-8E9B542602B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E426F8F-F953-432A-9E7A-8E9B542602B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93E8447C-E946-490E-895D-6154AAEF99A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E8447C-E946-490E-895D-6154AAEF99A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E8447C-E946-490E-895D-6154AAEF99A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E8447C-E946-490E-895D-6154AAEF99A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8B3380B-F3AA-44C2-8A20-DDF2D163BA81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8B3380B-F3AA-44C2-8A20-DDF2D163BA81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8B3380B-F3AA-44C2-8A20-DDF2D163BA81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8B3380B-F3AA-44C2-8A20-DDF2D163BA81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

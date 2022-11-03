@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExoContacts.DAL.Entities
+namespace ExoContacts.Domain.Entities
 {
     public class Contact
     {
@@ -12,7 +12,7 @@ namespace ExoContacts.DAL.Entities
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public string? NickName { get; set; }
-        public string  Mail { get; set; }
+        public string Mail { get; set; }
         public string Phone { get; set; }
         public DateTime? BirthDate { get; set; }
         public string ContactType { get; set; }

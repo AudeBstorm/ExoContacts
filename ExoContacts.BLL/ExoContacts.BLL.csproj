@@ -7,11 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
+    <PackageReference Include="Isopoh.Cryptography.Argon2" Version="1.1.12" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExoContacts.Domain\ExoContacts.Domain.csproj" />
+    <ProjectReference Include="..\ExoContacts.DAL\ExoContacts.DAL.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,3 +1,4 @@
+using ExoContacts.BLL.Services;
 using ExoContacts.DAL.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<ContactRepository>();
+builder.Services.AddScoped<ContactService>();
+builder.Services.AddScoped<UserRepository>();
+builder.Services.AddScoped<UserService>();
+
 
 var app = builder.Build();
 

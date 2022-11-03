@@ -1,4 +1,4 @@
-﻿using ExoContacts.DAL.Entities;
+﻿using ExoContacts.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;

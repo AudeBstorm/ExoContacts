@@ -1,8 +1,8 @@
 ﻿using ExoContacts.APP.Models;
 using Microsoft.AspNetCore.Mvc;
+using E = ExoContacts.Domain.Entities;
+using ExoContacts.BLL.Services;
 
-using ExoContacts.DAL.Repositories;
-using E = ExoContacts.DAL.Entities;
 namespace ExoContacts.APP.Controllers
 {
     public class ContactController : Controller
@@ -14,9 +14,9 @@ namespace ExoContacts.APP.Controllers
         //U -> Update
         //D -> Delete
 
-        private readonly ContactRepository _contactService; 
+        private readonly ContactService _contactService; 
 
-        public ContactController(ContactRepository contactService)
+        public ContactController(ContactService contactService)
         {
             _contactService = contactService;
         }
@@ -60,7 +60,8 @@ namespace ExoContacts.APP.Controllers
                     Phone = contactToAdd.Phone,
                     NickName = contactToAdd.NickName
                 };
-                _contactService.Add(contact);
+                
+                _contactService.Create(contact);
                 //Redirection vers la vue liste de tous les contacts
                 return RedirectToAction("Index");
             }
